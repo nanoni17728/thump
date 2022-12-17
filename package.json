@@ -18,12 +18,14 @@
     "gulp": "^3.9.1",
     "gulp-changed": "^2.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
-    "sassify": "^0.10.0",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^8.0.0",
     "vinyl-source-stream": "^1.1.0",
     "vue": "^2.3.3",
     "vueify": "^9.4.1",
     "watchify": "^3.7.0"
   },
-  "dependencies": {}
+  "overrides": {
+    "graceful-fs": "^4.2.10"
+  }
 }

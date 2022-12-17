@@ -7,7 +7,7 @@ const changed = require( "gulp-changed" );
 const browserify = require( "browserify" );
 const watchify = require( "watchify" );
 const babelify = require( "babelify" );
-const sass = require( "gulp-sass" );
+const sass = require( "gulp-sass" )(require('node-sass'));
 const source = require( "vinyl-source-stream" );
 const vueify = require( "vueify" );
 
@@ -27,7 +27,7 @@ gulp.task( "static-watch", () => {
 
 // ------
 
-gulp.task( "style-build", () => {
+  gulp.task( "style-build", () => {
   return gulp.src( "./src/style/main.scss" )
   .pipe( sass().on( "error", sass.logError ) )
   .pipe( rename( "bundle.css" ) )
